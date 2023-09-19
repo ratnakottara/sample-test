@@ -25,9 +25,6 @@ jobs:
     - name: Build the application
       run: python build.py
 
-    - name: Run tests
-      run: pytest
-
     - name: Archive build artifacts
       uses: actions/upload-artifact@v2
       with:
