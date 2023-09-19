@@ -1,4 +1,4 @@
-name: Sample Workflow
+name: Sample Workfloww
 on: [workflow_dispatch,push,pull_request,issues]
 jobs:
   test:
