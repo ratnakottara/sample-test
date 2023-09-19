@@ -27,7 +27,7 @@ jobs:
     
     - name: Use Greeting
       run: |
-        echo "Greeting received from previous step: ${{ job.outputs.greeting}}
+        echo "Greeting received from previous step: ${{ job.outputs.greeting}}"
 
       
   build:
