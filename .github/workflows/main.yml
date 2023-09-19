@@ -10,6 +10,26 @@ jobs:
 
     - name: Use environment variable
       run: echo "Value of MY_VARIABLE is $MY_VARIABLE"
+
+
+  example_job:
+    runs-on: ubuntu-latest
+
+    outputs:
+      greeting: ${{ steps.say_hello.outputs.greeting }}
+
+    steps:
+    - name: Say Hello
+      id: say_hello
+      run: |
+        echo "Hello, World!"
+        echo "::set-output name=greeting::Hello from GitHub Actions!"
+    
+    - name: Use Greeting
+      run: |
+        echo "Greeting received from previous step: ${{ job.outputs.g
+
+      
   build:
     runs-on: ubuntu-latest
 
