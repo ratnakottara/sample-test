@@ -1,0 +1,12 @@
+name: Sample Workflow
+on: [workflow_dispatch,push,pull_request,issues]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set environment variable
+      run: echo "MY_VARIABLE=example" >> $GITHUB_ENV
+
+    - name: Use environment variable
+      run: echo "Value of MY_VARIABLE is $MY_VARIABLE"
